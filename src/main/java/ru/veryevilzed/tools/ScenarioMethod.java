@@ -12,5 +12,6 @@ import java.lang.annotation.Target;
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.SOURCE)
 public @interface ScenarioMethod {
+    String name() default "";
     ScenarioTarget[] targets() default {};
 }

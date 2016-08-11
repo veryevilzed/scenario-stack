@@ -12,7 +12,6 @@ import java.lang.annotation.Target;
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.SOURCE)
 public @interface Scenario {
-    String name() default "main";
-    String incoming();
+    String name() default "";
     String context() default "java.lang.Object";
 }

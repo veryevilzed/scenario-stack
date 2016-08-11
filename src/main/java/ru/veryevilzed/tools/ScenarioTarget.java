@@ -13,9 +13,9 @@ import java.lang.annotation.Target;
 @Target({})
 @Retention(RetentionPolicy.SOURCE)
 public @interface ScenarioTarget {
-    String name();
+    String method();
     String autowired() default "";
     String autowiredName() default "";
     String qualifier() default "";
-    String constructor() default "";
+    String[] params() default {};
 }
