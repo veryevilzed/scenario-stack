@@ -45,6 +45,11 @@ public class ExecutableScenarioElement {
         public boolean equals(Object obj) {
             return obj.getClass() == AutowiredItems.class && ((AutowiredItems) obj).autowiredName.equals(this.autowiredName);
         }
+
+        @Override
+        public int hashCode() {
+            return autowiredName.hashCode();
+        }
     }
 
     Set<AutowiredItems> autowiredItems = new HashSet<>();
